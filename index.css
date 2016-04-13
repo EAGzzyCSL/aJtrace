@@ -1,0 +1,152 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*container*/
+
+#div_container {
+  flex: 1 0 0;
+  margin: 0.4em;
+  display: flex;
+}
+#div_container button {
+  border: none;
+  display: inline-block;
+  outline: 0;
+  padding: 0.4em 1em;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  background-color: #F88E8B;
+  text-align: center;
+  transition: .2s ease-out;
+  white-space: nowrap;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+}
+#div_container button:hover {
+  background-color: #F45551;
+  color: #fff;
+}
+
+/*column*/
+
+.div_column {
+  flex: 1 0 0;
+  margin: 0 0.1em;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}
+#div_codeConsole {
+  flex-grow: 2;
+}
+
+/*co1*/
+
+#textarea_code {
+  flex: 5 0 0;
+  font-family: monospace;
+}
+#ul_console {
+  background: #FDF6E3;
+  list-style: none;
+  padding: 0;
+  font-family: monospace;
+  color: #657B83;
+  font-size: 1.4em;
+  flex: 2 0 0;
+  margin: 0;
+  overflow: auto;
+}
+
+/*co2*/
+
+#textarea_input {
+  height: 12em;
+}
+.div_bottons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5em;
+}
+
+/*co3*/
+
+#ul_call {
+  padding: 0;
+  flex:1 0 0;
+}
+#ul_call li {
+  list-style: none;
+  margin: 0.2em;
+  0;
+}
+#ul_call li.match {
+  color: rgb(30, 144, 255);
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*tomatch*/
+
+#div_tomatch {
+  border: 1px solid rgb(169, 169, 169);
+  padding: 2px;
+  flex: 1 0 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 1em;
+}
+#div_tomatch input {
+  display: block;
+  border: none;
+  outline: none;
+  width: 120%;
+}
+
+/*about*/
+
+#div_about {
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/*toast*/
+
+#div_toast {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  height: 6em;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#div_toast.show {
+  display: flex;
+}
+#span_toast {
+  flex: 0 0 20em;
+  height: 3em;
+  border-radius: 1em;
+  background-color: #212121;
+  color: white;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.4s ease;
+}
+#span_toast.show {
+  opacity: 1;
+}
