@@ -1,7 +1,10 @@
 
 import java.util.Scanner;
 public class Main {
-
+  /*
+  * 根据我多年的吃蛋炒饭经验编写的一个做蛋炒饭外卖的模拟
+  * if you made a terrible cooking follow this,you could have a JAVA coffee instead.
+  * */
     public static void main(String[] args) {
         Scanner myIn = new Scanner(System.in);
         String name = myIn.nextLine();
@@ -204,4 +207,3 @@ enum Cmd {
         System.out.println("后厨正在" + this.name);
     }
 }
-
