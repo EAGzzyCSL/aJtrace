@@ -57,7 +57,7 @@ public aspect Trace {
 			callDepth++; // 函数调用深度加1
 
 			try {
-				fw.write(stack.peek() + "-----→" + name + "\n");
+				fw.write(stack.peek() + "@" + name + "\n");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
