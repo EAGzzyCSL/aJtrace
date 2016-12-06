@@ -1,20 +1,16 @@
 
-import java.util.Scanner;
 public class Main {
-  /*
-  * 根据我多年的吃蛋炒饭经验编写的一个做蛋炒饭外卖的模拟
-  * if you made a terrible cooking follow this,you could have a JAVA coffee instead.
-  * */
+    /*
+    * 根据我多年的吃蛋炒饭经验编写的一个做蛋炒饭外卖的模拟
+    * if you made a terrible cooking follow this,you could have a JAVA coffee instead.
+    * */
     public static void main(String[] args) {
-        Scanner myIn = new Scanner(System.in);
-        String name = myIn.nextLine();
-        myIn.close();
         System.out.println("+++++++++++++++++++++++++++++");
         System.out.println("++.........................++");
-        System.out.println("++.........饱了么外卖.......++");
+        System.out.println("++.........饱了么外卖........++");
         System.out.println("++.........................++");
         System.out.println("+++++++++++++++++++++++++++++");
-        System.out.println("尊敬的顾客" + name + "您好,您的蛋炒饭已接单。");
+        System.out.println("尊敬的顾客您好,您的蛋炒饭已接单。");
         System.out.println("我们是开放式厨房，您将看到厨房中的一切");
         System.out.println("--------------------");
         /*把油烧开
@@ -51,7 +47,7 @@ public class Main {
         * 要{放碗里}得先拿碗
         * */
         System.out.println("--------------------");
-        System.out.println("尊敬的顾客" + name + ",您的蛋炒饭已在配送。");
+        System.out.println("尊敬的顾客,您的蛋炒饭已在配送。");
     }
 
     /**/
@@ -198,12 +194,15 @@ enum Cmd {
 
 
     private String name;
+    private boolean log = false;
 
     Cmd(String name) {
         this.name = name;
     }
 
     public void sayDone() {
-        System.out.println("后厨正在" + this.name);
+        if (log) {
+            System.out.println("后厨正在" + this.name);
+        }
     }
 }
